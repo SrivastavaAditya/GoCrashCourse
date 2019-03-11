@@ -2,44 +2,44 @@ package main
 
 import (
 	"fmt"
-	"strconv")
+	"strconv"
+)
 
-type Person struct{
+type Person struct {
 	firstName string
-	lastName string
-	city string
-	gender string
-	age int
+	lastName  string
+	city      string
+	gender    string
+	age       int
 }
 
 //Greeting method (value receiver)
-func greeting(p Person) string{
+func greeting(p Person) string {
 	return "Hello, my name is " + p.firstName + " " + p.lastName + " and my age is " + strconv.Itoa(p.age)
 }
 
 //has Birthday method (pointer receiver)
-func (p *Person) hasBirthday(){
+func (p *Person) hasBirthday() {
 	p.age++
 }
 
 //get married
-func (p *Person) getMarried(spouseLastName string){
-	if p.gender == "m" || p.gender == "M"{
+func (p *Person) getMarried(spouseLastName string) {
+	if p.gender == "m" || p.gender == "M" {
 		return
-	}else{
+	} else {
 		p.lastName = spouseLastName
 	}
 }
 
-
-func main(){
-	// Init Person jusing Struct
-	person1 := Person {
+func main() {
+	// Init Person using Struct
+	person1 := Person{
 		firstName: "Samantha",
-		lastName: "Smith",
-		city: "Boston",
-		gender: "f",
-		age: 25}
+		lastName:  "Smith",
+		city:      "Boston",
+		gender:    "f",
+		age:       25}
 
 	// Alternative
 	person2 := Person{"Aditya", "Srivastava", "Noida", "M", 24}
