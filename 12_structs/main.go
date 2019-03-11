@@ -33,6 +33,7 @@ func (p *Person) getMarried(spouseLastName string) {
 }
 
 func main() {
+
 	// Init Person using Struct
 	person1 := Person{
 		firstName: "Samantha",
@@ -40,6 +41,13 @@ func main() {
 		city:      "Boston",
 		gender:    "f",
 		age:       25}
+
+	person3 := Person{
+		firstName: "Shubham",
+		lastName:  "Suyal",
+		city:      "Mayur Vihar",
+		gender:    "m",
+		age:       23}
 
 	// Alternative
 	person2 := Person{"Aditya", "Srivastava", "Noida", "M", 24}
@@ -51,4 +59,5 @@ func main() {
 	person2.getMarried("Katyal")
 	person1.getMarried("Katyal")
 	fmt.Println(person1, person2)
+	fmt.Println(person3)
 }
